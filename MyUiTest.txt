@@ -1,0 +1,64 @@
+game.StarterGui:SetCore("SendNotification",{
+        Title = "Successfully Executed";
+        Text = "Hi Negir";
+    })
+end)
+
+
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
+
+local UI = GUI:CreateWindow("Blox Fruit","Nigger why clicked it?")
+
+local MainPage = UI:addPage("Main",1,true,6)
+
+
+local Time = MainPage:addLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time : " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+
+--Button
+MainPage:addButton("RipperHub" ,function()
+   _G.Color = Color3.fromRGB(52, 190, 255)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/NEWBF.lua"))()
+end)
+MainPage:addButton("ThunderZ" ,function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
+end)
+MainPage:addButton("Newhub" ,function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Xeter"))()
+end)
+
+--Fs
+local fstab = UI:addPage("Fighting Stle",1,true,6)
+ 
+fstab:addButton("Superhuman" , function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
+end)
+fstab:addButton("Deathstep" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
+end)
+fstab:addButton("E-Claw" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
+end)
+fstab:addButton("SharkmanKarate" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+end)
+fstab:addButton("DragonTalon" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
+end)
+
+--Misc
+local misc = UI:addPage("misc",1,true,6)
+misc:addButton("Teleport To world 2" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+end)
+misc:addButton("Teleport To world 3" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+end)
+misc:addButtom("Buy Random Fruit" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end)
+misc:addButtom("Random Bone" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
+end)
+misc:addButton("Store Fruit" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit",v)
+end)
